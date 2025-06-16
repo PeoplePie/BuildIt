@@ -1,0 +1,37 @@
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(uuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  role         Role     @default(client)
+  createdAt    DateTime @default(now())
+}
+
+model Project {
+  id          String   @id @default(uuid())
+  userId      String
+  productName String
+  category    String
+  materials   String
+  description String
+  sketchPath  String?
+  createdAt   DateTime @default(now())
+}
+
+enum Role {
+  client
+  designer
+  supplier
+  admin
+}

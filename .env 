@@ -1,0 +1,10 @@
+# Leave this as-is for now (you'll update in Step 2)
+DATABASE_URL=postgresql://postgres:nRMoYdfllcRqpqlXqNRmxipqZTLwVqgM@yamanote.proxy.rlwy.net:50304/railway
+
+# This is for login/authentication
+NEXTAUTH_URL=http://localhost:3000
+
+# Generate a secret (below) and paste here
+NEXTAUTH_SECRET=LjSu7cjcAfWMoZdFiyjZ7H1JmHh3pUIln+Ts/cuQNK4=
+
+
